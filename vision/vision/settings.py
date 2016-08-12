@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bonanza',
     'notification',
+    'accounts',
+    'profiles',
 ]
 
 MIDDLEWARE_CLASSES = [

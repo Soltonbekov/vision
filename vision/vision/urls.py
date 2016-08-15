@@ -24,5 +24,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^accounts/', include('accounts.urls')),
     url(r'^profiles/', include('profiles.urls')),
+    url(r'^wallets/', include('income.urls')),
     url(r'^$', views.advice_of_day, name='advice_of_day'),
 ]

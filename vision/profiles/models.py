@@ -17,12 +17,9 @@ class Profile(models.Model):
     slug = models.SlugField(unique=True)
     create_add = models.DateTimeField(u'Профиль был создан: ', auto_now_add=True)
 
-    def get_full_name(self):
-        """
-        Returns the first_name plus the last_name, with a space in between.
-        """
-        full_name = '%s %s' % (self.first_name, self.last_name)
-        return full_name.strip()
+    class Meta:
+        verbose_name = u'профиль'
+        verbose_name_plural = u'профили'
 
     def __unicode__(self):
         return self.user.username

@@ -22,6 +22,9 @@ class Wallets(models.Model):
     def __unicode__(self):
         return self.name
 
+    def update_wallet_balance(self, amount):
+        self.available_balance += amount
+
 
 class Transactions(models.Model):
     """Transaction class"""
@@ -31,6 +34,7 @@ class Transactions(models.Model):
     value_date = models.DateTimeField(auto_now_add=True)
     drcr_ind = models.CharField(max_length=1)
     wallet = models.ForeignKey(Wallets)
+    user = models.ForeignKey(User)
 
     class Meta:
         verbose_name = u'проводка'

@@ -7,10 +7,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!--<tite>Совет дня</title>-->
 
-        <link href="{% static 'bootstrap-3.3.7-dist/bootstrap.css' %}" rel="stylesheet">
+        <link href="{% static 'bootstrap/css/bootstrap.css' %}" rel="stylesheet">
     </head>
 
     <body>
       {% block content %}{% endblock %}
     </body>
+    <!-- jQuery -->
+    <script src="{% static 'bootstrap/js/jquery.js' %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
 </html>

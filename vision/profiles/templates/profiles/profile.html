@@ -1,5 +1,6 @@
 {% extends 'notification/base.html' %}
   {% block content %}
+    <img src="{{ profile.avatar.url }}" alt="">
     {{ profile.user }}
     {{ profile.first_name }}
     {{ profile.last_name }}
@@ -9,3 +10,4 @@
     {{ profile.slug }}
     {{ profile.create_add }}
   {% endblock %}
+

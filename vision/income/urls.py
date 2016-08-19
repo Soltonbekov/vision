@@ -7,4 +7,5 @@ from income import views
 
 urlpatterns =  [
     url(r'^$', views.wallets, name='wallets'),
+    url(r'^create_trn/', views.create_trn, name='create_trn'),
 ]

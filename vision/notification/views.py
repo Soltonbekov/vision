@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 
 from django.http import Http404, HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from notification.models import Advice
-from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
 
 def advice_of_day(request):

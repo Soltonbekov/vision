@@ -4,6 +4,7 @@ from __future__ import unicode_literals
 from django.db import models
 from django.contrib.auth.models import User
 from fontawesome.fields import IconField
+from category.models import Category
 
 
 class Wallets(models.Model):
@@ -36,6 +37,7 @@ class Transactions(models.Model):
     drcr_ind = models.CharField(max_length=1)
     wallet = models.ForeignKey(Wallets)
     user = models.ForeignKey(User, blank=True, null=True)
+    category = models.ForeignKey(Category, blank=True, null=True)
 
     class Meta:
         verbose_name = u'проводка'

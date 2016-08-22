@@ -1,0 +1,11 @@
+{% extends 'notification/base.html' %}
+  {% block content %}
+    {% for item in categories %}
+        {{ item.name }}
+        {{ item.desc }}
+        {{ item.category_type }}
+        {{ item.slug }}
+        {{ item.created_at }}
+        {{ item.icon }}
+    {% endfor %}
+  {% endblock %}

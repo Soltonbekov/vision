@@ -1,7 +1,7 @@
 {% extends 'notification/base.html' %}
   {% block content %}
-    {{ wallets.name }}
-    {{ wallets.desc }}
-    {{ wallets.currency }}
-    {{ wallets.available_balance }}
+    <h1>{{ wallets.name }}</h1>
+    <p>{{ wallets.desc }}</p>
+    <span>{{ wallets.currency }}</span>
+    <span>{{ wallets.available_balance }}</span>
   {% endblock %}

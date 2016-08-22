@@ -11,7 +11,7 @@ class Category(models.Model):
     name = models.CharField(max_length=20)
     desc = models.CharField(max_length=255)
     category_type = models.CharField(max_length=255)
-    slug = models.CharField(max_length=20)
+    slug = models.CharField(max_length=45, blank=True, null=True, unique=True)
     created_at = models.DateTimeField(auto_now_add=True)
     icon = IconField()
     user = models.ForeignKey(User, verbose_name=u'Пользователь')

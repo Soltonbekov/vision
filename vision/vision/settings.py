@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'accounts',
     'profiles',
     'income',
+    'category',
     'fontawesome',
 ]
 

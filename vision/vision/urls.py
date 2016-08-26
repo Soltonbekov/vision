@@ -14,6 +14,7 @@ urlpatterns = [
     url(r'^profiles/', include('profiles.urls', namespace="profiles")),
     url(r'^wallets/', include('income.urls')),
     url(r'^category/', include('category.urls')),
+    url(r'^goals/', include('goals.urls')),
     url(r'^$', views.advice_of_day, name='advice_of_day'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)\
   + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

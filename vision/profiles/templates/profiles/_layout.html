@@ -1,0 +1,61 @@
+{% extends 'notification/base.html' %}
+
+{% block title %} Профиль - {% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="http://127.0.0.1:8000/media/profiles/upload/avatar_pic/075ddc07a54f859c7160c175111d0686.jpg" class="img-circle" width="160">
+                    </div>
+                    <div class="col-md-8">
+                        <h4 style="margin-top: 44px;">{% firstof request.user.get_full_name request.user.username %}</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="well">
+                    <h1>$201739, 400</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top:40px;">
+            <div class="col-md-8">
+                <ul class="nav nav-tabs">
+                  <li role="presentation" class="active"><a href="#">Доходы</a></li>
+                  <li role="presentation"><a href="#">Расходы</a></li>
+                  <li role="presentation"><a href="#"><i class="glyphicon glyphicon-road"></i>Цели</a></li>
+                </ul>
+                <table class="table">
+                    <tr>
+                        <th>ID</th>
+                        <th>TEST1</th>
+                        <th>TEST2</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>asdfasd</td>
+                        <td>afasdf</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>asdfasd</td>
+                        <td>afasdf</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>asdfasd</td>
+                        <td>afasdf</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-4">
+                <p><a href="#" class="btn btn-warning"><i class="glyphicon glyphicon-plus"></i> Добавить расход</a></p>
+                <p><a href="#" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i> Добавить доход</a></p>
+                <p><a href="#" class="btn btn-success"><i class="glyphicon glyphicon-plus"></i> Добавить цель</a></p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

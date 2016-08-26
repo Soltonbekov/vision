@@ -10,8 +10,8 @@ from notification import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^accounts/', include('accounts.urls')),
-    url(r'^profiles/', include('profiles.urls')),
+    url(r'^accounts/', include('accounts.urls', namespace="accounts")),
+    url(r'^profiles/', include('profiles.urls', namespace="profiles")),
     url(r'^wallets/', include('income.urls')),
     url(r'^category/', include('category.urls')),
     url(r'^$', views.advice_of_day, name='advice_of_day'),

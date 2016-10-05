@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'oti4kty7^a1_fv^^ks3i=e)&u*61lk0qwm=bon(683hxh&yi%f'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['http://altynbek.djigitdev.com/',]
 
 
 # Application definition

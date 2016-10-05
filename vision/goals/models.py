@@ -10,7 +10,7 @@ class Goals(models.Model):
     """User goals"""
     name = models.CharField(max_length=20)
     desc = models.CharField(max_length=255)
-    picture = models.ImageField(u'Фотография пользователя', upload_to='profiles/upload/goals_pic/', blank=True, null=True)
+    picture = models.ImageField(u'Картинка мечты', upload_to='profiles/upload/goals_pic/', blank=True, null=True)
     url = models.URLField(blank=True, null=True)
     icon = IconField()
     user = models.ForeignKey(User, verbose_name=u'Пользователь')

@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'category',
     'goals',
     'fontawesome',
+    'lettuce.django', # this guy will do the job :)
 ]
 
 MIDDLEWARE_CLASSES = [

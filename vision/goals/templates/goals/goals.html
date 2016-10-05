@@ -1,0 +1,7 @@
+{% extends 'notification/base.html' %}
+  {% block content %}
+    {% for item in goals %}
+        {{ item.name }}
+        {{ item.desc }}
+    {% endfor %}
+  {% endblock %}

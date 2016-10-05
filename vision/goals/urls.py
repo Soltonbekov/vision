@@ -7,4 +7,5 @@ from goals import views
 
 urlpatterns =  [
     url(r'^$', views.goals, name='goals'),
+    url(r'^new_goal/', views.new_goal, name='new_goal'),
 ]

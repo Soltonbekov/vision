@@ -88,7 +88,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'vision_db',
         'USER': 'root',
-        'PASSWORD': '1q2w3e4r5t',
+        'PASSWORD': 'root',
     }
 }
 

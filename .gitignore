@@ -1,4 +1,4 @@
 *.pyc
 bckup/
 vision-env/
-vision/settings_local.py
+vision/vision/settings_local.py

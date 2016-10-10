@@ -25,7 +25,7 @@ SECRET_KEY = 'oti4kty7^a1_fv^^ks3i=e)&u*61lk0qwm=bon(683hxh&yi%f'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['http://altynbek.djigitdev.com/',]
+ALLOWED_HOSTS = ['altynbek.djigitdev.com',]
 
 
 # Application definition
@@ -80,19 +80,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'vision.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/1.9/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'vision_db',
-        'USER': 'root',
-        'PASSWORD': 'root',
-    }
-}
-
-
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
 
@@ -137,3 +124,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 FONTAWESOME_CSS_URL = '//cdn.example.com/fontawesome-min.css' # absolute url
 FONTAWESOME_CSS_URL = 'myapp/css/fontawesome.min.css' # relative url
+
+from settings_local import *

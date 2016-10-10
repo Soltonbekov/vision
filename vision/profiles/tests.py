@@ -1,3 +1,8 @@
-from django.test import TestCase
+# -*- coding: utf-8 -*-
 
-# Create your tests here.
+import unittest
+
+class TestOnetoOne(unittest.TestCase):
+    
+    def test_one(self):
+        self.assertEqual(1, 1)

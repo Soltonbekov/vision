@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-from fabric.api import env, cd, run, prefix
+from fabric.api import env, cd, run, prefix, local
 
 
-env.hosts = ['root@104.131.74.168']
+env.hosts = ['root@meerim.djigitdev.com']
 
 
 def deploy():
@@ -13,12 +13,12 @@ def deploy():
         $ fab deploy
     :param db_password:
     """
-    environment = prefix('source /home/.virtualenvs/djigitdev/bin/activate')
+    environment = prefix('source /var/www/altynbek/venv/bin/activate')
 
-    with cd('/home/web/djigitdev'):
+    with cd('/var/www/altynbek/vision/vision'):
         with environment:
             run('git pull')
-            run('pip install -r requirements.txt')
+            run('pip install -r ../requirements.txt')
             run('python ./manage.py migrate')
             run('python ./manage.py collectstatic --noinput')
 
@@ -45,3 +45,7 @@ def restart_server():
     Замечание: для этого необходимо иметь root привелегии.
     """
     run('supervisorctl restart discount_cloud_api_gunicorn')
+
+
+def test():
+    local('source /home/altynbek/python/coder/vision-project/vision-env/bin/activate & python manage.py test')
